@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "DevTools"
 include(":app")
 include(":devtools")
+include(":common")

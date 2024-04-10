@@ -1,5 +1,6 @@
 package co.init.devtools.hilt
 
+import co.init.devtools.example.data.CoinService
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
@@ -9,12 +10,12 @@ import okhttp3.OkHttpClient
 import okhttp3.Protocol
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import java.util.concurrent.TimeUnit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 private const val CONNECTION_TIMEOUT_SECONDS = 30L
-private const val BASE_URL = "https://mobility.cleverlance.com/"
+private const val BASE_URL = "https://api.coindesk.com/v1/bpi/"
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -47,7 +48,7 @@ object AppModules {
             .retryOnConnectionFailure(true)
             .build()
 
-//    @Provides
-//    fun provideImageService(retrofit: Retrofit): ImageService =
-//        retrofit.create(ImageService::class.java)
+    @Provides
+    fun provideCoinInfoService(retrofit: Retrofit): CoinService =
+        retrofit.create(CoinService::class.java)
 }

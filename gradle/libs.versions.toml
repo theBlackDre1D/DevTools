@@ -1,5 +1,5 @@
 [versions]
-agp = "8.3.0"
+agp = "8.3.2"
 hiltAndroid = "2.48"
 hiltWork = "1.2.0"
 kotlin = "1.9.0"
@@ -17,6 +17,7 @@ appcompat = "1.6.1"
 material = "1.11.0"
 roomKtx = "2.6.1"
 workRuntimeKtx = "2.9.0"
+coroutinesVersions = "1.7.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -46,6 +47,8 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutinesVersions" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleRuntimeKtx" }
 
 
 [plugins]

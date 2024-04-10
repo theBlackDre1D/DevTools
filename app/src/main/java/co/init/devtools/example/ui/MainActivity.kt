@@ -17,6 +17,15 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
+    data class State(
+        val isLoading: Boolean = false
+    )
+
+    enum class ScreenEvents {
+        LOGIN_BUTTON_CLICK,
+        IMAGE_ERROR_HANDLED
+    }
+
     private val viewModel: MainActivityVM by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
