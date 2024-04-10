@@ -23,3 +23,4 @@ rootProject.name = "DevTools"
 include(":app")
 include(":devtools")
 include(":common")
+include(":base")
